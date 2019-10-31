@@ -15,30 +15,44 @@ and open the template in the editor.
     <body>
         <div>TODO write content</div>
         
-        <form>
+        <form method="POST" action="cliente">
             <div class="form-group">
                 <label id="labelNome" for="nome">Nome:</label>
                 <input class="form-control" type="text" id="nome" name="nome" required />
             </div>
             
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input class="form-control" type="text" id="cpf" name="cpf" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="dataNasc">Data de Nascimento</label>
+                <input class="form-control" type="text" id="dataNasc" name="dataNasc" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input class="form-control" type="text" id="email" name="email" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input class="form-control" type="text" id="telefone" name="telefone" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="genero">Gênero</label>
+                <input class="form-control" type="text" id="genero" name="genero" />
+            </div>
+            
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <textarea class="form-control" name="endereco"></textarea>
+            </div>
+            
             <button id="salvar" class="btn btn-primary" type="submit">Salvar</button>
         </form>
-        
-        <script>
-            
-            $(document).ready(
-                function(){
-                    $('#labelNome').on('click',
-                    function(){
-                        $(this).css('background-color','#00FF00');
-                        $('#nome').val('teste');
-                        $('#salvar').hide(500);
-                    }
-                    );
-                }
-            );
-            
-        </script>
         
     </body>
 </html>
