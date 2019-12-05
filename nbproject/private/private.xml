@@ -5,13 +5,14 @@
         <group>
             <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/dao/ClienteDAO.java</file>
             <file>file:/home/raphael/NetBeansProjects/jareweb/web/cliente.jsp</file>
+            <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/servlets/ClienteJSTLServlet.java</file>
             <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/dao/TarefaDAO.java</file>
+            <file>file:/home/raphael/NetBeansProjects/jareweb/web/clientejstl.jsp</file>
             <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/servlets/ClienteServlet.java</file>
+            <file>file:/home/raphael/NetBeansProjects/jareweb/web/WEB-INF/tags/cpf.tag</file>
             <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/dao/ClienteDAOImpl.java</file>
-            <file>file:/home/raphael/NetBeansProjects/jareweb/web/hello.jsp</file>
             <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/entidades/Cliente.java</file>
             <file>file:/home/raphael/NetBeansProjects/jareweb/src/conf/persistence.xml</file>
-            <file>file:/home/raphael/NetBeansProjects/jareweb/web/index.html</file>
         </group>
     </open-files>
 </project-private>
