@@ -1,5 +1,6 @@
 package entidades;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 @Table(name = "cliente")
 @SequenceGenerator(name="seq_cliente",
         sequenceName="cliente_id_seq",allocationSize=1)
-public class Cliente {
+public class Cliente implements Serializable {
     
     @Id
     @Column(name="id")

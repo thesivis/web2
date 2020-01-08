@@ -1,21 +1,24 @@
 package dao;
 
+import cdi.DAOQualifier;
 import entidades.Cliente;
 import java.util.List;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+@DAOQualifier
 public class ClienteDAOImpl implements ClienteDAO {
 
-    private EntityManagerFactory fabrica
-            = Persistence
-                .createEntityManagerFactory("jarewebPU");
+    @Inject
+    private EntityManagerFactory fabrica;
 
     public void save(Cliente cliente) {
         EntityManager em = fabrica.createEntityManager();
         em.getTransaction().begin();
+        System.out.println(cliente.getClass().getSimpleName());
         if (cliente.getId() > 0) {
             em.merge(cliente);
         } else {

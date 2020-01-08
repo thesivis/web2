@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/dao/ClienteDAO.java</file>
-            <file>file:/home/raphael/NetBeansProjects/jareweb/web/cliente.jsp</file>
-            <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/servlets/ClienteJSTLServlet.java</file>
-            <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/dao/TarefaDAO.java</file>
-            <file>file:/home/raphael/NetBeansProjects/jareweb/web/clientejstl.jsp</file>
-            <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/servlets/ClienteServlet.java</file>
-            <file>file:/home/raphael/NetBeansProjects/jareweb/web/WEB-INF/tags/cpf.tag</file>
+            <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/cdi/Utils.java</file>
+            <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/cdi/DAOQualifier.java</file>
+            <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/servlets/ClienteCDIServlet.java</file>
             <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/dao/ClienteDAOImpl.java</file>
             <file>file:/home/raphael/NetBeansProjects/jareweb/src/java/entidades/Cliente.java</file>
             <file>file:/home/raphael/NetBeansProjects/jareweb/src/conf/persistence.xml</file>
