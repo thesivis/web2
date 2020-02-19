@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <title>JSP Page</title>
+            <script th:src="@{/js/jquery.min.js}"></script>
+            <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
+    </head>
+    <body>
+        <h1>Cliente</h1>
+
+        <div class="container">
+            <form method="POST" th:object="${cliente}" th:action="@{/cliente/salvar}">
+                <input type="hidden" name="id" th:field="*{id}"/>
+                <div class="form-group">
+                    <label id="labelNome" for="nome">Nome:</label>
+                    <input class="form-control" type="text" id="nome" name="nome" required th:field="*{nome}" />
+                </div>
+
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" th:field="*{cpf}" />
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input class="form-control" type="text" id="telefone" name="telefone" required th:field="*{telefone}"/>
+                </div>
+
+                <button id="salvar" class="btn btn-success" type="submit">Salvar</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <table class="table">
+                <thead class='thead-dark'>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr th:each="c : ${lista}">
+                        <td th:text="${c.nome}"></td>
+                        <td th:text="${c.cpf}"></td>
+                        <td>
+    <a th:href="@{'/cliente/editar/'+${c.id}}">
+        <button class="btn btn-primary">Editar</button>
+    </a>
+    <a th:href="@{'/cliente/excluir/'+${c.id}}">
+        <button class="btn btn-danger">Excluir</button>
+    </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
