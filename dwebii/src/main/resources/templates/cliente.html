@@ -28,6 +28,14 @@
                     <label for="telefone">Telefone</label>
                     <input class="form-control" type="text" id="telefone" name="telefone" required th:field="*{telefone}"/>
                 </div>
+                
+                <div class="form-group">
+                    <label for="Estado">Estado</label>
+                    <select name="estado" th:field="*{estado}">
+                        <option value="" selected="true">Selecione</option>
+                        <option th:each="e : ${estados}" th:value="${e.id}" th:text="${e.sigla}"></option>
+                    </select>
+                </div>
 
                 <button id="salvar" class="btn btn-success" type="submit">Salvar</button>
             </form>
@@ -39,6 +47,7 @@
                     <tr>
                         <th scope="col">Nome</th>
                         <th scope="col">CPF</th>
+                        <th scope="col">Estado</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
@@ -47,6 +56,7 @@
                     <tr th:each="c : ${lista}">
                         <td th:text="${c.nome}"></td>
                         <td th:text="${c.cpf}"></td>
+                        <td th:text="${c.estado.sigla}"></td>
                         <td>
     <a th:href="@{'/cliente/editar/'+${c.id}}">
         <button class="btn btn-primary">Editar</button>

@@ -1,6 +1,7 @@
 package br.ufmt.webii.dwebii.controller;
 
 import br.ufmt.webii.dwebii.dao.ClienteDAO;
+import br.ufmt.webii.dwebii.dao.EstadoDAO;
 import br.ufmt.webii.dwebii.entidades.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,10 +19,14 @@ public class ClienteController {
     @Autowired
     private ClienteDAO dao;
     
+    @Autowired
+    private EstadoDAO estDAO;
+    
     @GetMapping
     public String index(Model model){
         model.addAttribute("cliente", new Cliente());
         model.addAttribute("lista", dao.findAll());
+        model.addAttribute("estados", estDAO.findAll());
         return "cliente";
     }
     
@@ -36,7 +41,7 @@ public class ClienteController {
         Cliente edit = dao.findById(pk).get();
         model.addAttribute("cliente", edit);
         model.addAttribute("lista", dao.findAll());
-        
+        model.addAttribute("estados", estDAO);
         return "cliente";
     }
     
