@@ -1,0 +1,1 @@
+insert into usuario values (1,'$2y$12$yYriNX6TSz8smC3EKJYiauGw8gHtu9Hp0MjeFKo1FIO1dSJN0Jeji', 'teste');
