@@ -1,0 +1,5 @@
+curso/target/*
+**.vscode
+
+/cursofront/node_modules/*
+/cursofront/.next/*

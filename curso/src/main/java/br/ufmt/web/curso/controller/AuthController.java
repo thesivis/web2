@@ -25,9 +25,6 @@ public class AuthController {
   AuthenticationManager authenticationManager;
 
   @Autowired
-  PasswordEncoder encoder;
-
-  @Autowired
   private UsuarioRepository rep;
 
   @PostMapping
