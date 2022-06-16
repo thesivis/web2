@@ -77,4 +77,21 @@ public class DisciplinaController {
       .status(HttpStatus.NOT_FOUND)
       .body("Entidade não encontrada!");
   }
+
+  @GetMapping("/{id}")
+  public ResponseEntity<Object> get(
+      @PathVariable Long id
+    ) {
+      Optional<Disciplina> opDisc 
+        = rep.findById(id);
+      
+      if(opDisc.isEmpty()){
+        return ResponseEntity.status(
+            HttpStatus.NOT_FOUND
+          ).body("Não encontrado");
+      } else {
+        return ResponseEntity.ok()
+          .body(opDisc.get());
+      }
+    }
 }
