@@ -3,3 +3,5 @@ curso/target/*
 
 /cursofront/node_modules/*
 /cursofront/.next/*
+/cursodotnet/bin/*
+/cursodotnet/obj/*
