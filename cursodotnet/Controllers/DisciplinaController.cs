@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using Br.Ufmt.Web.Curso.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Br.Ufmt.Web.Curso.Controller
 {
   [ApiController]
   [Route("api/[controller]")]
+  [Authorize]
   public class DisciplinaController
   {
     private IDisciplinaRepository rep;
